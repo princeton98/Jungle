@@ -1,0 +1,13 @@
+<h4>Thank you for your order!</h4>
+<% (0..(@order.line_items.length()-1)).each do |counter| %>
+  <div>
+  <% product = Product.find @order.line_items[counter].product_id %>
+  <h4><%= product.name %> </h4>
+  <h4><%= image_tag product.image.url, class: 'main-img' %> </h4>
+  <h4><%= product.description %> </h4>
+  <h4>Quantity: <%= @order.line_items[counter].quantity%> </h4>
+  <h4>Total Price of items: <%= humanized_money_with_symbol (@order.line_items[counter].total_price_cents * 0.01)%> </h4>
+  </div>
+  <% end %>
+  <h3>Order Total: <%= humanized_money_with_symbol (@order.total_cents * 0.01)%> </h3>
+  <h3>Email: <%= @order.email%> </h3>
