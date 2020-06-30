@@ -3,7 +3,7 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+ <% if cart.length >= 1 %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +48,9 @@
       <% end %>
     </div>
   </div>
-
+<%end%>
+<% if cart.length < 1 %>
+  <h4> Cart is empty </h4>
+  <%= link_to 'Home Page', "/" %>
+  <%end%>
 </section>
