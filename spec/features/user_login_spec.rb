@@ -17,8 +17,8 @@ RSpec.feature "UserLogins", type: :feature, js:true  do
     fill_in "password", with: "test1234"
     click_on "Submit"
     find_link "Logout"
-    save_screenshot
-
+    
+    expect(page).to have_content("Logout")
   end
 
 end
