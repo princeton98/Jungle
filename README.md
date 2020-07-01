@@ -17,6 +17,7 @@ Overall, learning Ruby and Rails was a fun process. Doing mini assignments while
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
 
+
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
@@ -28,3 +29,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Screenshots
+!["My Cart Page"](https://github.com/princeton98/Jungle/blob/master/docs/Cart_Page.png?raw=true)
+!["Products Page"](https://github.com/princeton98/Jungle/blob/master/docs/Main_Page.png?raw=true)
+!["Registration Page"](https://github.com/princeton98/Jungle/blob/master/docs/Registration_Page.png?raw=true)
