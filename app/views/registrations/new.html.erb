@@ -7,8 +7,11 @@
 
   <div class="row">
     <div class="col-sm-6 col-sm-offset-1">
+    <% if flash[:alert] %>
+      <h3><strong><%= flash[:alert] %> </strong></h3>
+      <% end %>
       <%= form_for :registration, url: '/registration' do |form| %>
-
+      
         <div class="form-group">
           <%= form.label :first_name %>
           <%= form.text_field :first_name, class: 'form-control', :required => true %>

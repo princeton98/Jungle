@@ -8,6 +8,7 @@ class RegistrationsController < ApplicationController
       session[:user_id] = user.id
       redirect_to "/"
     else
+      flash[:alert] = "Invalid information"
       redirect_to "/registration/new"
   end
 end

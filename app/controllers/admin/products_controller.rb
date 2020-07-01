@@ -14,6 +14,7 @@ class Admin::ProductsController < ApplicationController
     if @product.save
       redirect_to [:admin, :products], notice: 'Product created!'
     else
+      alert "Error occured"
       render :new
     end
   end
